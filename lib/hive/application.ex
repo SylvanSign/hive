@@ -9,9 +9,10 @@ defmodule Hive.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      HiveWeb.Endpoint
+      HiveWeb.Endpoint,
       # Starts a worker by calling: Hive.Worker.start_link(arg)
       # {Hive.Worker, arg},
+      Hive.Game
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

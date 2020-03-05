@@ -17,8 +17,8 @@ defmodule HiveWeb.Router do
   scope "/", HiveWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    live "/fun", FunLive
+    get "/:name", PageController, :index
+    live "/", MeldLive
   end
 
   # Other scopes may use custom stacks.
